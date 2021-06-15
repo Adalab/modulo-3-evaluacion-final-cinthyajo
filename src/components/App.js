@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../images/logo.png";
 import CharacterList from "./CharacterList";
 import getApiData from "../services/api";
 import ls from "../services/local-storage";
@@ -22,8 +23,8 @@ const App = () => {
 
   return (
     <>
-      <h1 className="title--big">Rick and Morty</h1>
-      <div className="col2">
+      <img src={logo} alt="Rick and Morty" />
+      <div>
         <CharacterList characters={filteredCharacters} />
       </div>
     </>
