@@ -3,7 +3,7 @@
 const getApiData = () => {
   //Llamar al API con un fetch
   return (
-    fetch("https://rickandmortyapi.com/api/character/")
+    fetch("//rickandmortyapi.com/api/character/")
       //Me convierte los datos a json
       .then((response) => response.json())
       .then((data) => {

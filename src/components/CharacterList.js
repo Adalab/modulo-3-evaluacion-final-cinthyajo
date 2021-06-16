@@ -1,7 +1,7 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 
-//es un map de pintar datos, recibe por props el listado de usuarios (props.users.map), los mapea y los pinta (return)
+//es un map de pintar datos, recibe por props el listado de personajes (props.users.map), los mapea y los pinta (return)
 //Almaceno el return del map en la constante userElements y luego pinto esa constante en el <ul> {userElements}
 const CharacterList = (props) => {
   const characterElements = props.characters.map((character) => {
