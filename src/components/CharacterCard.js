@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-//componente UserList usa el componente User que pinta el card con los datos dentro del <article>
 const CharacterCard = (props) => {
   return (
     <li>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-//import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import logo from "../images/logo.png";
+import CharacterDetail from "./CharacterDetail";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import getApiData from "../services/api";
@@ -10,6 +11,7 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
 
+  //Call API with useEffect hook
   useEffect(() => {
     if (characters.length === 0) {
       getApiData().then((charactersData) => {
@@ -22,7 +24,7 @@ const App = () => {
     ls.set("characters", characters);
   }, [characters]);
 
-  //estudiarla bien, base para sacar el punto 2
+  //Function: filter characters
   const filteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
@@ -33,14 +35,33 @@ const App = () => {
     }
   };
 
+  //Function: looking for characters
+  const renderCharacterDetail = (props) => {
+    const routeCharacterId = parseInt(props.match.params.characterId);
+
+    const foundCharacter = characters.find((character) => {
+      return character.id === routeCharacterId;
+    });
+
+    if (foundCharacter !== undefined) {
+      return <CharacterDetail foundCharacter={foundCharacter} />;
+    } else {
+      return <p>Personaje no encontrado</p>;
+    }
+  };
+
   return (
     <>
       <img src={logo} alt="Rick and Morty" />
-      <div>
-        <Filters filterName={filterName} handleFilter={handleFilter} />
-
-        <CharacterList characters={filteredCharacters} />
-      </div>
+      <switch>
+        <Route exact path="/">
+          <div>
+            <Filters filterName={filterName} handleFilter={handleFilter} />
+            <CharacterList characters={filteredCharacters} />
+          </div>
+        </Route>
+        <Route path="/character/:characterId" render={renderCharacterDetail} />
+      </switch>
     </>
   );
 };
