@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CharacterDetail = (props) => {
-  console.log(props);
+  const showStatus = () => {
+    if (props.foundCharacter.status === "Dead") {
+      return "💀";
+    }
+  };
   return (
     <div>
       <Link to="/"> volver</Link>
@@ -11,6 +15,7 @@ const CharacterDetail = (props) => {
       </header>
       <section>
         <img src={props.foundCharacter.image} alt={props.foundCharacter.name} />
+        <span>{showStatus}</span>
         <ul>
           <li>Species: {props.foundCharacter.species}</li>
           <li>Origin: {props.foundCharacter.origin.name}</li>

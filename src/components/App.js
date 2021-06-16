@@ -5,6 +5,7 @@ import CharacterDetail from "./CharacterDetail";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import getApiData from "../services/api";
+import Header from "./Header";
 import ls from "../services/local-storage";
 
 const App = () => {
@@ -46,13 +47,14 @@ const App = () => {
     if (foundCharacter !== undefined) {
       return <CharacterDetail foundCharacter={foundCharacter} />;
     } else {
-      return <p>Personaje no encontrado</p>;
+      return <p>Character not found</p>;
     }
   };
 
   return (
     <>
-      <img src={logo} alt="Rick and Morty" />
+      <Header logo={logo} />
+
       <switch>
         <Route exact path="/">
           <div>
