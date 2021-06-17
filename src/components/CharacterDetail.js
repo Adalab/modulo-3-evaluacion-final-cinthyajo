@@ -28,7 +28,7 @@ const CharacterDetail = (props) => {
         <ul className="listContainer">
           <li>Species: {props.foundCharacter.species}</li>
           <li>Origin: {props.foundCharacter.origin.name}</li>
-          <li>Episodes: {props.foundCharacter.episode}</li>
+          <li>Episodes: {props.foundCharacter.episodes.length}</li>
           <li>Status: {props.foundCharacter.status}</li>
         </ul>
       </section>

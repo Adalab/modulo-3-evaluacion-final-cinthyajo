@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../stylesheet/FilterByName.scss";
 
 const FilterByName = (props) => {
@@ -24,4 +25,7 @@ const FilterByName = (props) => {
   );
 };
 
+FilterByName.propTypes = {
+  filterName: PropTypes.string,
+};
 export default FilterByName;
