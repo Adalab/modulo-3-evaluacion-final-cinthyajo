@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "../stylesheet/CharacterDetail.scss";
 
 const CharacterDetail = (props) => {
@@ -15,7 +16,7 @@ const CharacterDetail = (props) => {
         Go back
       </Link>
       <header>
-        <h2 className="header.Detail">{props.foundCharacter.name}</h2>
+        <h2 className="headerDetail">{props.foundCharacter.name}</h2>
       </header>
       <section>
         <img
@@ -35,4 +36,7 @@ const CharacterDetail = (props) => {
   );
 };
 
+CharacterDetail.propTypes = {
+  foundCharacter: PropTypes.object.isRequired,
+};
 export default CharacterDetail;

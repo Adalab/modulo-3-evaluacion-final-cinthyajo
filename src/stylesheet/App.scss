@@ -1,7 +1,10 @@
-//.divContainer {
-//background-image: url("../images/universe.jpeg");
-//}
-
 body {
   background-image: url("../images/universe.jpeg");
+}
+
+.noText {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  color: rgb(52, 232, 238);
 }
