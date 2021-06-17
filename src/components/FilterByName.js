@@ -16,7 +16,7 @@ const FilterByName = (props) => {
         type="text"
         name="name"
         id="name"
-        placeholder="Nombre del personaje"
+        placeholder="Name of the character"
         value={props.filterName}
         onChange={handleChange}
       />

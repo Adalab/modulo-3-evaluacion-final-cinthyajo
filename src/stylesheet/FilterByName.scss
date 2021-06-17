@@ -1,14 +1,18 @@
 .formSection {
   text-align: center;
-  background-color: black;
+  background-image: url("../images/universe.jpeg");
 }
 
 .formInput {
   text-align: center;
   padding: 8px;
+  margin-bottom: 40px;
   width: 300px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 15px;
-  background-color: black;
-  border-color: rgba(201, 230, 14, 0.941);
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  background-color: white;
+  border-color: rgb(52, 232, 238);
 }

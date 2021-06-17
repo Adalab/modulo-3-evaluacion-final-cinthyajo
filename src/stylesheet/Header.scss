@@ -1,10 +1,14 @@
 .header {
   height: 250px;
-  background-color: black;
+  background-image: url("../images/universe.jpeg");
   text-align: center;
 }
 
 .logo {
   margin-top: 80px;
   width: 300px;
+}
+
+.logo:hover {
+  transform: rotateY(180deg);
 }

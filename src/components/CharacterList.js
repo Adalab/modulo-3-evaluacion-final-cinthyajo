@@ -11,14 +11,14 @@ const CharacterList = (props) => {
         name={character.name}
         species={character.species}
         image={character.image}
-        key={character.id}
+        id={character.id}
       />
     );
   });
 
   return (
-    <section>
-      <ul className="cards">{characterElements}</ul>
+    <section className="cards">
+      <ul>{characterElements}</ul>
     </section>
   );
 };
