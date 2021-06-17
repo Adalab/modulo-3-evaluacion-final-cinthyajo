@@ -33,7 +33,7 @@ Vamos a implementar una nueva funcionalidad: al hacer clic sobre la tarjeta de u
 
 ## 5. Detallitos de calidad
 
-Como nos gusta cuidar la semántica, el campo de texto debe estar recubierto por una etiqueta <form />.
+Como nos gusta cuidar la semántica, el campo de texto debe estar recubierto por una etiqueta form.
 
 Si estando en el campo de filtrado pulsamos intro debéis impedir que el navegador navegue o cambie la ruta sin querer.
 
